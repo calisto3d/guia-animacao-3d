@@ -387,7 +387,7 @@
   /* ─── MODOS ─── */
   .modes-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
@@ -476,7 +476,7 @@
     border-radius: 4px;
     padding: 18px 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     transition: border-color 0.2s;
   }
@@ -485,7 +485,7 @@
 
   .key {
     font-family: 'DM Mono', monospace;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 500;
     background: var(--bg);
     border: 1px solid rgba(255,94,0,0.4);
@@ -493,14 +493,19 @@
     padding: 5px 10px;
     border-radius: 3px;
     white-space: nowrap;
-    min-width: 68px;
+    min-width: 80px;
+    max-width: 110px;
     text-align: center;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    line-height: 1.4;
   }
 
   .shortcut-desc {
     font-size: 0.82rem;
     color: var(--muted);
+    line-height: 1.55;
+    padding-top: 4px;
   }
 
   .tab-panel { display: none; }
@@ -874,16 +879,7 @@
       <h4>Edit Mode</h4>
       <p>Edita vértices, arestas e faces. Aqui você molda e detalha a geometria do objeto.</p>
     </div>
-    <div class="mode-card">
-      <span class="mode-badge">Ctrl+Tab</span>
-      <h4>Sculpt Mode</h4>
-      <p>Escultura digital com pincéis. Ideal para personagens e superfícies orgânicas.</p>
-    </div>
-    <div class="mode-card">
-      <span class="mode-badge">Ctrl+Tab</span>
-      <h4>Pose Mode</h4>
-      <p>Anima os bones de um armature. Ativo quando um esqueleto está selecionado.</p>
-    </div>
+
   </div>
 </section>
 
@@ -933,6 +929,7 @@
     <div class="shortcut-card"><span class="key">Scroll</span><span class="shortcut-desc">Zoom in / Zoom out na cena</span></div>
     <div class="shortcut-card"><span class="key">Shift + MMB</span><span class="shortcut-desc">Pan — mover a câmera lateralmente</span></div>
     <div class="shortcut-card"><span class="key">Numpad 5</span><span class="shortcut-desc">Alterna perspectiva / ortográfica</span></div>
+    <div class="shortcut-card"><span class="key">Alt + MMB</span><span class="shortcut-desc">Arrastar para o lado — alterna perspectiva / ortográfica também</span></div>
     <div class="shortcut-card"><span class="key">Numpad 1/3/7</span><span class="shortcut-desc">Vistas Front, Side e Top</span></div>
     <div class="shortcut-card"><span class="key">. (Numpad)</span><span class="shortcut-desc">Focar câmera no objeto selecionado</span></div>
   </div>
